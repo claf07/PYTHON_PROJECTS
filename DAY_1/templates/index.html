@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Management</title>
+</head>
+<body>
+    <main>
+        <h1>Contact Management System</h1>
+        <section>
+            <div>
+                <h3>Add New Contact</h3>
+                <form action="/add_contact" method="post">
+                    Name:
+                    <input type="text" name="name" id="name" class="name" required>
+                    Email:
+                    <input type="email" name="email" id="email" class="email" required>
+                    Contact No:
+                    <input type="number" name="contact" id="contact" class="contact" required>
+                    <button type="submit">Create Contact</button>
+                    <button type="reset">Reset</button>
+                </form>
+            </div>
+        </section>
+        <section>
+            <div>
+                <h3>Display Contact</h3>
+                <form action="/display_contact" method="get">
+                    <button type="submit">View All</button>
+                </form>
+            </div>
+        </section>
+        <section>
+            <div>
+                <h3>Search Contact</h3>
+                <form action="/search_contact" method="get">
+                    Name:
+                    <input type="text" name="searchName" id="searchName" class="searchName" required>
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+        </section>
+        <section>
+            <div>
+                <h3>Update Contact</h3>
+                <form action="/update_contact" method="post">
+                    Existing Name:
+                    <input type="text" name="updateName" id="updateName" class="updateName" required>
+                    New Email:
+                    <input type="email" name="updateEmail" id="updateEmail" class="updateEmail">
+                    New Phone No:
+                    <input type="number" name="updateContact" id="updateContact" class="updateContact">
+                    <button type="submit">Update</button>
+                </form>
+            </div>
+        </section>
+        <section>
+            <h3>Delete Contact</h3>
+            <form action="/delete_contact" method="post">
+                Name:
+                <input type="text" name="deleteName" id="deleteName" class="deleteName" required>
+                <button type="submit">Delete</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
